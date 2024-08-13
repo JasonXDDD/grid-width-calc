@@ -1,0 +1,65 @@
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+// reset
+@layer base
+  html
+    font-family: 'Roboto', 'Noto Sans TC', sans-serif
+    scroll-behavior: smooth
+
+html, body
+  height: 100%
+  width: 100%
+
+body
+  @apply bg-zinc-200
+
+.card
+  @apply bg-white p-4 rounded-2xl shadow-xl shadow-zinc-300/50
+  hr
+    @apply -mx-4
+
+hr
+  @apply border-t w-full my-4 border-zinc-700/50
+
+:root
+  scrollbar-gutter: stable
+
+::-webkit-scrollbar
+  width: 0
+  height: 0
+
+::-webkit-scrollbar-track
+  border-radius: 100px
+  margin: 80px 0 5
+
+::-webkit-scrollbar-thumb
+  border-radius: 100px
+  background: #3b3b3b
+
+::selection
+  color: #fff
+  background: #7300ff
+
+*[disabled]
+  @apply cursor-not-allowed opacity-50
+
+.overflow-x-auto
+  &::-webkit-scrollbar
+    display: none
+
+.size-4
+  @apply h-4 w-4 min-w-[1rem] min-h-[1rem]
+.size-5
+  @apply h-5 w-5 min-w-[1.25rem] min-h-[1.25rem]
+.size,.size-6
+  @apply h-6 w-6 min-w-[1.5rem] min-h-[1.5rem]
+.size-7
+  @apply h-7 w-7 min-w-[1.75rem] min-h-[1.75rem]
+.size-8
+  @apply h-8 w-8 min-w-[2rem] min-h-[2rem]
+.size-10
+  @apply h-10 w-10 min-w-[2.5rem] min-h-[2.5rem]
+.size-full
+  @apply h-full w-full min-w-full min-h-full
